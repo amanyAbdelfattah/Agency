@@ -110,10 +110,10 @@ header .container .welcome-msg .read-more
     display: flex;
     justify-content: space-between;
 }
-.wlcm-prof .container .wlcm-prof-container .wlcm-prof-child
+/* .wlcm-prof .container .wlcm-prof-container .wlcm-prof-child
 {
     flex-basis: 45%;
-}
+} */
 .wlcm-prof .container .wlcm-prof-container .wlcm-prof-msg .wlcm-prof-p-container
 {
     display: flex;
@@ -667,6 +667,12 @@ footer
 /* Start Media Quries */
 @media(max-width:1400px)
 {
+    .wlcm-prof-msg.wlcm-prof-child {
+        flex-basis: 30%;
+    }
+    .wlcm-prof .wlcm-prof-img{
+        flex-basis: 50%;
+    }
     .team .container .team-container .team-imgs img
     {
         max-width: 24%;
@@ -798,6 +804,26 @@ footer
     .sec-wlcm-prof .container .sec-wlcm-prof-container 
     {
         flex-direction: column-reverse;
+    }
+    .wlcm-prof .container .wlcm-prof-container {
+        flex-wrap: wrap;
+        align-items: center;
+    }
+    .wlcm-prof .wlcm-prof-img {
+        background-image: url(../img/serv1.png);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        position: relative;
+        height: 500px;
+        z-index: 0;
+        color: #fff;
+        /* flex-basis: 50%; */
+        margin-top: 5%;
+    }
+    
+    .wlcm-prof .container .wlcm-prof-container .wlcm-prof-child {
+        flex-basis: 100%;
     }
     .sec-wlcm-prof .container .sec-wlcm-prof-container .sec-img-parent
     {
@@ -1009,6 +1035,11 @@ footer
     .contact-us .contact-us-container .more-info-container .social-media .social-media-icons
     {
         margin: 10px 14px;
+    }
+}
+@media(max-width:576px){
+    .wlcm-prof .container .wlcm-prof-container {
+        flex-direction: row;
     }
 }
 /* End Media Quires */
